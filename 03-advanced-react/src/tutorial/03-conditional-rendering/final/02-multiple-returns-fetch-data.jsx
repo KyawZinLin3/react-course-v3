@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-const url = 'https://api.github.com/users/QuincyLarson';
+import { useEffect, useState } from "react";
+const url = "https://api.github.com/users/QuincyLarson";
 
 const MultipleReturnsFetchData = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,6 +19,7 @@ const MultipleReturnsFetchData = () => {
 
         const user = await resp.json();
         setUser(user);
+        console.log(user);
       } catch (error) {
         setIsError(true);
         // console.log(error);
@@ -41,7 +42,7 @@ const MultipleReturnsFetchData = () => {
   return (
     <div>
       <img
-        style={{ width: '150px', borderRadius: '25px' }}
+        style={{ width: "150px", borderRadius: "25px" }}
         src={avatar_url}
         alt={name}
       />
